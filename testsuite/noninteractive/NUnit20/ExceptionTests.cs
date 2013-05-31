@@ -74,8 +74,6 @@ namespace NpgsqlTests
             if (TheConnection.PostgreSqlVersion < new Version("9.3"))
                 return;
 
-            // In this case we'll test a simple unique violation, we're not too interested in testing more
-            // cases than this as the same code is executed in all error situations.
             try
             {
                 NpgsqlCommand command = new NpgsqlCommand(dropTable, TheConnection);
